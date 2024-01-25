@@ -822,6 +822,7 @@ if __name__ == '__main__':
             refFnames[rname] = check_reference.get_ref_fname(AA_REPO, rname)
 
     faidict = {}
+    """
     if args.bam:
         if args.ref and refFnames[args.ref]:
             faidict[args.ref] = AA_REPO + args.ref + "/" + refFnames[args.ref] + ".fai"
@@ -854,7 +855,7 @@ if __name__ == '__main__':
 
     except FileNotFoundError:
         logging.warning("Data repo appears to be out of date. Please update your data repo!\n")
-
+    """
     gdir = AA_REPO + args.ref + "/"
     ref_fasta = gdir + refFnames[args.ref]
     ref_genome_size_file = gdir + args.ref + "_noAlt.fa.fai"
