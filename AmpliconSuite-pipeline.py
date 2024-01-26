@@ -253,8 +253,8 @@ def run_amplified_intervals(AA_interpreter, CNV_seeds_filename, sorted_bam, outp
                             cnsize_min):
     logging.info("\nRunning amplified_intervals")
     AA_seeds_filename = "{}_AA_CNV_SEEDS".format(output_directory + sname)
-    cmd = "{}/amplified_intervals.py --ref {} --bed {} --bam {} --gain {} --cnsize_min {} --out {}".format(
-        AA_SRC, args.ref, CNV_seeds_filename, sorted_bam, str(cngain), str(cnsize_min),
+    cmd = "amplified_intervals.py --ref {} --bed {} --bam {} --gain {} --cnsize_min {} --out {}".format(
+        args.ref, CNV_seeds_filename, sorted_bam, str(cngain), str(cnsize_min),
         AA_seeds_filename)
 
     logging.info(cmd)
