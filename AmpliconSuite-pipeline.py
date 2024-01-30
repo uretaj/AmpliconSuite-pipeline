@@ -987,14 +987,14 @@ if __name__ == '__main__':
                 tb = time.time()
                 timing_logfile.write("AmpliconClassifier:\t" + "{:.2f}".format(tb - ta) + "\n")
 
-        run_metadata_filename = save_run_metadata(outdir, sname, args, launchtime, commandstring)
+        #run_metadata_filename = save_run_metadata(outdir, sname, args, launchtime, commandstring)
 
-        with open(sample_metadata_filename, 'w') as fp:
-            json.dump(sample_info_dict, fp, indent=2)
+        #with open(sample_metadata_filename, 'w') as fp:
+        #    json.dump(sample_info_dict, fp, indent=2)
 
-        if args.run_AA and args.run_AC:
-            make_AC_table(sname, AC_outdir, AC_SRC, run_metadata_filename, sample_metadata_filename,
-                          sample_info_dict["sample_cnv_bed"])
+        #if args.run_AA and args.run_AC:
+        #    make_AC_table(sname, AC_outdir, AC_SRC, run_metadata_filename, sample_metadata_filename,
+        #                  sample_info_dict["sample_cnv_bed"])
 
     else:
         ta = time.time()
